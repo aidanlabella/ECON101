@@ -1,0 +1,63 @@
+%%HW1
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1in,footskip=0.￼25in]{geometry}
+\usepackage{tikz}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.16}
+
+\usepackage{setspace}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+\noindent
+Aidan LaBella \\
+Assignment 2 \\ 
+16 February 2021\\
+ECON-101 \\
+\\
+\begin{enumerate}
+\item
+    
+\item
+    In mathematics, the term `linear` implies a constant rate of change (slope) for all $x \in \mathbb{R}$. However, we are not measuring slope when we measure price elasticity, so this does not apply here. Rather, we are measuring the percent change of the quantity or price relative to the average of two prices and quantities, and then taking the ratio of those. Therefore, our price elasticity will not be constant. This makes sense since especially considering if you look at a graph for the price-elasticity equation. This equation is not linear when plotted using any decreasing linear equation (see below), and therefore there is not constant   \\
+
+\begin{tikzpicture}
+    \begin{axis}[
+    domain=0:5,
+    xmin=0,
+    xmax=2,
+    ymin=0,
+    ymax=2,
+    xlabel={$\frac{q}{t}$},
+    ylabel={$P$},
+    ticks=none,
+    samples=50,
+    smooth,
+    no markers,
+    ]
+    \addplot {(((-x + 5) - (-(x-1) + 5))/((-x + 5) + (-(x-1) + 5))) * ((-x  - x-1 )/(-x -x-1)};
+    \addplot {x};
+  \end{axis}
+\end{tikzpicture}
+    
+\item
+    Suppose I charge \$40 for each memebership to my Flight Data Monitoring (FDM) software anually, and our server is currently able to house 2,000 users comfortably. Lets say we have one of our stoarge disks fail, reducing this capacity to \$1,500 and we cannot afford a new one at the moment, causing me to now charge \$60 annually. Given the formula: $\epsilon_{a,b} = \frac{\% \Delta_p}{\% \Delta_q}$, we can substitute these values as such to determine our elasticity: \\
+
+\begin{equation}
+    \begin{split}
+        \epsilon_{a,b} &= \frac{1500 - 2000}{1500 + 2000} * \frac{60 + 40}{60 - 40} \\
+        \epsilon_{a,b} &= \frac{-500}{3500} * \frac{100}{20} \\
+        \epsilon_{a,b} &= \frac{-1}{7} * 5 \\
+        \epsilon_{a,b} &= \frac{-5}{7} \\
+    \end{split}
+\end{equation}
+
+After taking the absoulte value of this result, we get $|\epsilon_{a,b}| = \frac{5}{7}$. This is a value less than $1$, which means that our price is relatively elasitc in this range. 
+
+\end{enumerate}
+\end{document}
